@@ -77,6 +77,9 @@ export const metadata: Metadata = {
     apple: "/putih.png",
     shortcut: "/putih.png",
   },
+  verification: {
+    google: "TuBTZaKbdd8vreKLtGNoIv7jlL7pTAZumknd8D7Ehrg",
+  },
 };
 
 export default function RootLayout({
