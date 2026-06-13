@@ -73,9 +73,12 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [{ url: "/putih.png", type: "image/png" }],
-    apple: "/putih.png",
-    shortcut: "/putih.png",
+    icon: [
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
+    shortcut: "/favicon-32.png",
   },
   verification: {
     google: "TuBTZaKbdd8vreKLtGNoIv7jlL7pTAZumknd8D7Ehrg",
