@@ -1,13 +1,14 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 const navItems = [
-  { name: 'Layanan', href: '#layanan' },
-  { name: 'Portfolio', href: '#portfolio' },
-  { name: 'Pricing', href: '#pricing' },
-  { name: 'Kontak', href: '#kontak' },
+  { name: "Layanan", href: "#layanan" },
+  { name: "Portfolio", href: "#portfolio" },
+  { name: "Pricing", href: "#pricing" },
+  { name: "Kontak", href: "#kontak" },
 ];
 
 export default function Navbar() {
@@ -19,29 +20,25 @@ export default function Navbar() {
       setScrolled(window.scrollY > 30);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[#0B1120]/80 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/10'
-          : 'bg-transparent'
+          ? "bg-[#0B1120]/80 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/10"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="h-20 flex items-center justify-between">
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center gap-2 group"
-          >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center font-bold text-white shadow-lg shadow-cyan-500/20">
-              R
-            </div>
+          <Link href="/" className="flex items-center gap-2 group">
+            {/* Logo */}
+            
 
             <div className="flex flex-col leading-none">
               <span className="text-white font-semibold text-lg tracking-tight">
@@ -84,17 +81,17 @@ export default function Navbar() {
               <div className="w-5 flex flex-col gap-1">
                 <span
                   className={`h-0.5 w-full bg-white rounded-full transition-all duration-300 ${
-                    menuOpen ? 'rotate-45 translate-y-1.5' : ''
+                    menuOpen ? "rotate-45 translate-y-1.5" : ""
                   }`}
                 />
                 <span
                   className={`h-0.5 w-full bg-white rounded-full transition-all duration-300 ${
-                    menuOpen ? 'opacity-0' : ''
+                    menuOpen ? "opacity-0" : ""
                   }`}
                 />
                 <span
                   className={`h-0.5 w-full bg-white rounded-full transition-all duration-300 ${
-                    menuOpen ? '-rotate-45 -translate-y-1.5' : ''
+                    menuOpen ? "-rotate-45 -translate-y-1.5" : ""
                   }`}
                 />
               </div>
@@ -106,7 +103,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${
-          menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="mx-4 mb-4 rounded-2xl border border-white/10 bg-[#111827]/95 backdrop-blur-xl p-4 shadow-2xl">
